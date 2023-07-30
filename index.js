@@ -17,12 +17,12 @@ const Persona = require("./clases/Persona.js");
 
         // Método Create para insertar registros en la tabla
         // const registroPersona = await Persona.create({
-        //     rut:"33.333.333-3",
+        //     rut: "33.333.333-3",
         //     nombre: "Luisa",
         //     apellido: "Roa"
         // })
         // console.log("***************************************");
-        // console.log("RegistroPersona",registroPersona.id);
+        // console.log("RegistroPersona", registroPersona.id);
         // console.log("***************************************");
 
 
@@ -48,20 +48,20 @@ const Persona = require("./clases/Persona.js");
 
         // Método findByPK para consultar condicionando por la clave primaria
         const consulta1 = await Persona.findByPk(2)
-        if(consulta1) {
+        if (consulta1) {
             // console.log(consulta1.get({ plain: true}));
         }
 
         // Método findOne para consultar 1 registro
-        const consulta2 = await Persona.findOne({ 
+        const consulta2 = await Persona.findOne({
             // where: {
             //     id: 1
             // },
             order: [
-                ["rut","ASC"]
+                ["rut", "ASC"]
             ]
         })
-        if(consulta2){
+        if (consulta2) {
             // console.log(consulta2.get({ plain: true}));
         }
 
@@ -76,7 +76,7 @@ const Persona = require("./clases/Persona.js");
         // )
 
         // Método destroy para eliminar registros
-        await Persona.destroy({ 
+        await Persona.destroy({
             where: {
                 id: 13
             }
